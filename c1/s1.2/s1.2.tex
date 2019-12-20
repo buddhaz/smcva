@@ -1,0 +1,47 @@
+% author: Shuning Zhang
+% creation date: 2019-12-20
+\documentclass[a4paper, 11pt]{ctexart}
+\usepackage[top=2cm, bottom=2cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath, amssymb}   
+\newcommand{\re}{\mathrm{Re}\,}
+\newcommand{\im}{\mathrm{Im}\,}
+\begin{document}
+\pagestyle{empty}
+\begin{enumerate}
+    \item % 1
+        略.
+    \item % 2
+        {\heiti 证明}\quad 设 $z = x + iy$.
+        \begin{enumerate}
+            \item % a
+                $\re(iz) = \re(ix - y) = \re(-y + ix) = -y = -\im(x + iy) = -\im z$;
+            \item % b
+                $\im(iz) = \im(ix - y) = \im(-y + ix) = x = \re(x + iy) = \re z$.
+        \end{enumerate}
+    \item % 3
+        {\heiti 证明}\quad 设 $z = x + iy$. 对 $(1 + z)^2$, 有
+        \begin{align*}
+            (1 + z)^2 &= ((1+x) + (0+iy))^2 \\
+                      &= (x+1)^2 + 2(x+1)iy + i^2y^2 \\
+                      &= (x^2 + 2x + 1) + (2ixy + 2iy) - y^2.
+        \end{align*}
+        对 $1 + 2z + z^2$, 有
+        \begin{align*}
+            1 + 2z + z^2 &= 1 + 2(x + iy) + (x + iy)^2 \\
+                         &= 1 + (2x + 2iy) + (x^2 + 2ixy + i^2y^2) \\
+                         &= (x^2 + 2x + 1) + (2ixy + 2iy) - y^2.
+        \end{align*}
+        因此, $(1 + z)^2 = 1 + 2z + z^2$.
+    \item % 4
+        略.
+    \item % 5
+        略.
+    \item % 6
+        略.
+    \item % 7
+        略.
+    \item 8
+    \item 9
+    \item 10
+\end{enumerate}
+\end{document}
