@@ -1,0 +1,77 @@
+% % @author Shuning Zhang
+% % @date 2020.2.17
+% \documentclass[a4paper, 11pt]{book}
+% \usepackage{amsfonts, amsmath, amssymb, amsthm}
+% \usepackage{color}
+% \usepackage{ctex}
+% \usepackage{enumerate}
+% \usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
+% \usepackage{multicol}
+% \newcommand{\re}{\mathrm{Re}\,}
+% \newcommand{\im}{\mathrm{Im}\,}
+% \begin{document}
+\begin{enumerate}[(1)]
+    \item % 1
+        略.
+    \item % 2
+        \begin{enumerate}
+            \item % a
+                \begin{proof}
+                    $\re(iz) = \re(-y+ix) = -y = -\im(x+iy) = -\im{z}$.
+                \end{proof}
+            \item % b
+                \begin{proof}
+                    $\im(iz) = \im(-y+ix) = x = \re(x+iy) = \re{z}$.
+                \end{proof}
+        \end{enumerate}
+    \item % 3
+        \begin{proof}
+            \begin{align*}
+                (z+1)^2 &= (z+1)(z+1) \\
+                &= (x+iy+1)(x+iy+1) \\
+                &= (x+1)^2 + 2(x+1)yi - y \\
+                &= x^2+2x+1 + 2xyi+2yi - y \\
+                &= x^2+2xyi-y + 2(x+iy) + 1 \\
+                &= z^2 + 2z + 1. \qedhere
+            \end{align*}
+        \end{proof}
+    \item % 4
+        略.
+    \item % 5
+        略.
+    \item % 6
+        略.
+    \item % 7
+        略.
+    \item % 8
+        \begin{proof}
+            \begin{gather*}
+                -(iy) = -((0,1)(y,0)) = -(0,y) = (0,-y), \\
+                (-i)y = (0,-1)(y,0) = (0,-y), \\
+                i(-y) = (0,1)(-y,0) = (0,-y). \qedhere
+            \end{gather*}
+        \end{proof}
+    \item % 9
+        略.
+    \item % 10
+        \begin{align*}
+            z^2+z+1=0 &\Rightarrow (x,y)(x,y) + (x,y) + (1,0) = (0,0) \\
+            &\Rightarrow (x^2-y^2,2xy) + (x+1,y) = (0,0) \\
+            &\Rightarrow (x^2-y^2+x+1,2xy+y) = (0,0) \\
+            &\Rightarrow
+            \begin{cases}
+                x^2-y^2+x+1 = 0, \\
+                y(2x+1) = 0.
+            \end{cases}
+        \end{align*}
+        从第二个方程解得 $x=-\dfrac12$, $y=0$. 当 $y=0$ 时, 第一个方程则变为
+        \[
+            x^2+x+1 = 0,    
+        \]
+        无解. 因此 $y=0$ 不是方程的解. 将 $x=-\dfrac12$ 带回第一个方程, 得到
+        \[
+            y^2 = \frac{3}{4}.    
+        \]
+        解得 $y = \pm\dfrac{\sqrt{3}}{2}$. 因此 $z=\displaystyle{\left(-\frac12,\pm\frac{\sqrt{3}}{2}\right)}$.
+\end{enumerate}
+% \end{document}
