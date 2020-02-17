@@ -1,15 +1,15 @@
-% @author Shuning Zhang
-% @date 2020.2.17
-\documentclass[a4paper, 11pt]{book}
-\usepackage{amsfonts, amsmath, amssymb, amsthm}
-\usepackage{color}
-\usepackage{ctex}
-\usepackage{enumerate}
-\usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
-\usepackage{multicol}
-\newcommand{\re}{\mathrm{Re}\,}
-\newcommand{\im}{\mathrm{Im}\,}
-\begin{document}
+% % @author Shuning Zhang
+% % @date 2020.2.17
+% \documentclass[a4paper, 11pt]{book}
+% \usepackage{amsfonts, amsmath, amssymb, amsthm}
+% \usepackage{color}
+% \usepackage{ctex}
+% \usepackage{enumerate}
+% \usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
+% \usepackage{multicol}
+% \newcommand{\re}{\mathrm{Re}\,}
+% \newcommand{\im}{\mathrm{Im}\,}
+% \begin{document}
 \begin{enumerate}
 \item % 1
     \begin{enumerate}
@@ -37,6 +37,9 @@
                 $\overline{(2+i)^2} = \overline{i^2+4i+4} = \overline{3+4i} = 3-4i$.
             \end{proof}
         \item % d
+            \begin{proof}
+                $|(2\overline{z} + 5)(\sqrt{2} - i)| = |2\overline{z} + 5||\sqrt{2} - i| = \sqrt{3}|2\overline{z} + 5| = \sqrt{3}|2z + 5|$.
+            \end{proof}
     \end{enumerate}
 \item % 2
     \begin{enumerate}
@@ -88,6 +91,12 @@
         }$.
     \end{proof}
 \item % 8
+    \begin{proof}
+        \begin{align*}
+            |\re(2+\overline{z}+z^3)| &\leqslant |2 + \overline{z} + z^3| \leqslant 2 + |\overline{z}| + |z|^3 \\
+            &\leqslant 2 + 1 + 1 = 4. \qedhere
+        \end{align*}
+    \end{proof}
 \item % 9
     略.
 \item % 10
@@ -121,8 +130,39 @@
 \item % 12
     略.
 \item % 13
+    略.
 \item % 14
+    \begin{proof}
+        \begin{align*}
+            |z - z_0| = R &\Leftrightarrow \sqrt{(x-x_0)^2 + (y-y_0)^2} = R \\
+            &\Leftrightarrow x^2 + x_0^2 - 2xx_0 + y^2 + y_0^2 - 2yy_0 = R^2 \\
+            &\Leftrightarrow (x^2 + y^2) - 2(xx_0 + yy_0) + (x_0^2 + y_0^2) = R^2 \\
+            &\Leftrightarrow |z|^2 - 2\re(z\overline{z_0}) + |z_0|^2 = R^2. \qedhere
+        \end{align*}
+    \end{proof}
 \item % 15
+    \begin{proof}
+        \begin{align*}
+            x^2 - y^2 = 1 &\Leftrightarrow (\re{z})^2 - (\im{z})^2 = 1 \\
+            &\Leftrightarrow \left(\frac{z+\overline{z}}{2}\right)^2 - \left(\frac{z-\overline{z}}{2i}\right)^2 = 1 \\
+            &\Leftrightarrow 2(z^2 + \overline{z}^2) = 4 \\
+            &\Leftrightarrow z^2 + \overline{z}^2 = 2. \qedhere
+        \end{align*}
+    \end{proof}
 \item % 16
+    \begin{proof}
+        因为
+        \begin{align*}
+            |z_1 + z_2|^2 &= (z_1 + z_2)\overline{(z_1 + z_2)} \\
+            &= (z_1 + z_2)(\overline{z_1} + \overline{z_2}) \\
+            &= z_1\overline{z_1} + (z_1\overline{z_2} + z_2\overline{z_1}) + z_2\overline{z_2} \\
+            &= |z_1|^2 + (z_1\overline{z_2} + \overline{z_1\overline{z_2}}) + |z_2|^2 \\
+            &= |z_1|^2 + 2\re(z_1\overline{z_2}) + |z_2|^2 \\
+            &\leqslant |z_1|^2 + 2|\re(z_1\overline{z_2})| + |z_2|^2 \\
+            &\leqslant |z_1|^2 + 2|z_1\overline{z_2}| + |z_2|^2 \\
+            &= |z_1|^2 + 2|z_1||z_2| + |z_2|^2,    
+        \end{align*}
+        故 $|z_1 + z_2| \leqslant |z_1| + |z_2|$.
+    \end{proof}
 \end{enumerate}
-\end{document}
+% \end{document}
