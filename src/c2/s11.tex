@@ -1,0 +1,46 @@
+% % @author Shuning Zhang
+% % @date 2020.2.18
+% \documentclass[a4paper, 11pt]{article}
+% \usepackage{amsfonts, amsmath, amssymb, amsthm}
+% \usepackage{color}
+% % \usepackage{ctex}
+% \usepackage{enumerate}
+% \usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
+% \usepackage{multicol}
+% \newcommand{\Arg}{\mathrm{Arg}\,}
+% \newcommand{\im}{\mathrm{Im}\,}
+% \newcommand{\re}{\mathrm{Re}\,}
+% \begin{document}
+\begin{enumerate}
+    \item % 1
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item % a
+                    $z \neq \pm1$;
+                \item % b
+                    $z \neq 0$;
+                \item % c
+                    $\re{z} \neq 0$;
+                \item % d
+                    $(\re{z})^2 + (\im{z})^2 \neq 1$.
+            \end{enumerate}
+        \end{multicols}
+    \item % 2
+        \begin{align*}
+            f(z) &= z^3 + z + 1 \\
+            &= (x+iy)^3 + (x+iy) + 1 \\
+            &= x^3 + i3x^2y - 3xy^3 - iy^3 + x + iy + 1 \\
+            &= (x^3 - 3xy^3 + x + 1) + i(3x^2y - y^3 + y).   
+        \end{align*}
+        Hence
+        \begin{gather*}
+            u(x, y) = x^3 - 3xy^3 + x + 1, \\
+            v(x, y) = 3x^2y - y^3 + y.
+        \end{gather*}
+    \item % 3
+        $\overline{z}^2 + 2iz$.
+    \item % 4
+        $(r + 1/r)\cos\theta + i(r - 1/r)\sin\theta$.
+\end{enumerate}
+% \end{document}
+        
