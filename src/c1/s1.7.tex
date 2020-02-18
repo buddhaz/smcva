@@ -1,0 +1,111 @@
+% % @author Shuning Zhang
+% % @date 2020.2.17
+% \documentclass[a4paper, 11pt]{article}
+% \usepackage{amsfonts, amsmath, amssymb, amsthm}
+% \usepackage{color}
+% \usepackage{ctex}
+% \usepackage{enumerate}
+% \usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
+% \usepackage{multicol}
+% \newcommand{\Arg}{\mathrm{Arg}\,}
+% \newcommand{\im}{\mathrm{Im}\,}
+% \newcommand{\re}{\mathrm{Re}\,}
+% \begin{document}
+\begin{enumerate}
+\item % 1
+    略.
+\item % 2
+    \begin{enumerate}
+        \item \begin{proof}
+            $|e^{i\theta}| = |\cos\theta + i\sin\theta| = \sqrt{\cos^2\theta + \sin^2\theta} = 1$.
+        \end{proof}
+        \item \begin{proof}
+            $\overline{e^{i\theta}} = \overline{\cos\theta + i\sin\theta} = \cos\theta - i\sin\theta = \cos(-\theta) + i\sin(-\theta) = e^{i(-\theta)}$.
+        \end{proof}
+    \end{enumerate}
+\item % 3
+    略.
+\item % 4
+    因为    
+    \begin{align*}
+        |e^{i\theta} - 1| &= |(\cos\theta, \sin\theta) - (1, 0)| \\
+        &= \sqrt{(\cos\theta-1)^2 + \sin^2\theta} \\
+        &= 2\sqrt{\sin^2\frac{\theta}{2}} = 2.
+    \end{align*}
+    又因 $0 \leqslant \theta < 2\pi$, $0 \leqslant \dfrac{\theta}{2} < \pi$, 故
+    \begin{align*}
+        2\sqrt{\sin^2\frac{\theta}{2}} = 2 &\Rightarrow \sin\frac{\theta}{2} = 1 \\
+        &\Rightarrow \theta = \pi.   
+    \end{align*}
+\item % 5
+    因为 \begin{align*}
+        & (\cos\theta + i\sin\theta)^k = \cos{k\theta} + i\sin{k\theta} \\
+        \Rightarrow{} & \cos^3\theta + 3i\cos^2\theta\sin\theta - 3\cos\theta\sin^2\theta - i\sin^3\theta = \cos{3\theta} + i\sin{3\theta}. \\
+    \end{align*}
+    又 \begin{align*}
+        \sin{3\theta} &= \sin(2\theta + \theta) = \sin{2\theta}\cos\theta + \cos{2\theta}\sin\theta \\
+        &= 2\sin\theta\cos^2\theta + \cos^2\theta\sin\theta - \sin^3\theta \\
+        &= 3\sin\theta\cos^2\theta - \sin^3\theta.
+    \end{align*}
+    故 \begin{gather*}
+        \cos{3\theta} = \cos^3\theta - 3\sin^2\theta\cos\theta, \\
+        \sin{3\theta} = 3\sin\theta\cos^2\theta - \sin^3\theta.
+    \end{gather*}
+\item % 6
+    \begin{enumerate}
+        \item 因为 \begin{gather*}
+            i = e^{i(\frac{\pi}{2})}, \\
+            (1-\sqrt{3}i) = 2e^{i(-\frac{\pi}{6})}, \\
+            (\sqrt{3} + i) = 2e^{i(\frac\pi3)}. \\
+        \end{gather*}
+        故 $i(1-\sqrt{3}i)(\sqrt{3} + i) = 4e^{i\frac{\pi}{6}} = 2(1+\sqrt{3}i)$.
+        \item 略.
+        \item 略.
+        \item 略.
+    \end{enumerate}
+\item % 7
+    \begin{proof}
+        因为 $\re{z_1} = r_1\cos\theta_1 > 0$, $\re{z_2} = r_2\cos\theta_2 > 0$, 又 $r_1 \geqslant 0$, $r_2 \geqslant 0$,
+        故 $\cos\theta_1 > 0$, $\cos\theta_2 > 0$, 即 $-\frac\pi2 < \theta_1 + 2k\pi < \frac\pi2$, $-\frac\pi2 < \theta_2 + 2k\pi < \frac\pi2$.
+        那么 \[
+            -\pi < \theta_1 + \theta_2 + 4k\pi = \theta_1 + \theta_2 < \pi.   
+        \]
+        因此 $\Arg(z_1z_2) = \Arg{z_1} + \Arg{z_2}$. 
+    \end{proof}
+\item % 8
+    $\displaystyle{
+        (z^m)^{-1} = (r^me^{im\theta})^{-1} = r^{-m}e^{im(-\theta)} = (r^{-1})^m(e^{i(-\theta)})^m = (r^{-1}e^{i(-\theta)})^m = (z^{-1})^m
+    }$.
+\item % 9
+    \begin{proof}
+        充分性. 利用 $|z| = |\overline{z}|$, 那么
+        \[
+            |z_1| = |c_1c_2| = |c_1||c_2| = |c_1||\overline{c_2}| = |c_1\overline{c_2}| = |z_2|.    
+        \]
+        必要性. 令 $z_1 = \exp(i\theta_1)$, $z_2 = \exp(i\theta_2)$, 且
+        \[
+            c_1 = \exp\left(i\frac{\theta_1+\theta_2}{2}\right), c_2 = \exp\left(i\frac{\theta_1-\theta_2}{2}\right).    
+        \]
+        那么
+        \[
+            \overline{c_2} = \exp\overline{\left(i\frac{\theta_1-\theta_2}{2}\right)} = \exp\left[i\left(-\frac{\theta_1-\theta_2}{2}\right)\right] = \exp\left(i\frac{\theta_2-\theta_1}{2}\right).    
+        \]
+        显然 $z_1 = c_1c_2$, $z_2 = c_1\overline{c_2}$. 并且
+        \begin{align*}
+            |z_1| = |c_1c_2| &= |c_1||c_2| \\
+            &= \sqrt{\cos^2\frac{\theta_1+\theta_2}{2} + \sin^2\frac{\theta_1+\theta_2}{2}}\sqrt{\cos^2\frac{\theta_1-\theta_2}{2} + \sin^2\frac{\theta_1-\theta_2}{2}} \\
+            &= \sqrt{\cos^2\frac{\theta_1+\theta_2}{2} + \sin^2\frac{\theta_1+\theta_2}{2}}\sqrt{\cos^2\frac{\theta_2-\theta_1}{2} + \sin^2\frac{\theta_2-\theta_1}{2}} \\
+            &= |c_1||\overline{c_2}| = |c_1\overline{c_2}| = |z_2|. \qedhere    
+        \end{align*}
+    \end{proof}
+\item % 10
+    {\color{red}remained}令 $s = 1 + z + z^2 + \cdots + z^n$, 那么 $zs = z + z^2 + z^3 + \cdots + z^{n+1}$, 进一步, 有
+    \[
+        s-zs = (1-z)s = 1 - z^{n+1}
+        \Rightarrow s = \frac{1-z^{n+1}}{1-z}.   
+    \]
+\item % 11
+    {\color{red}remained}
+\end{enumerate}
+% \end{document}
+    
