@@ -1,0 +1,44 @@
+% @author Shuning Zhang
+% @date 2020.2.18
+\documentclass[a4paper, 11pt]{article}
+\usepackage{amsfonts, amsmath, amssymb, amsthm}
+\usepackage{color}
+\usepackage{ctex}
+\usepackage{enumerate}
+\usepackage[bottom=2cm, left=2.5cm, right=2.5cm, top=2cm]{geometry}
+\usepackage{multicol}
+\newcommand{\Arg}{\mathrm{Arg}\,}
+\newcommand{\im}{\mathrm{Im}\,}
+\newcommand{\re}{\mathrm{Re}\,}
+\begin{document}
+\begin{enumerate}
+    \item % 1
+        略.
+    \item % 2
+        略.
+    \item % 3
+        略.
+    \item % 4
+        略.
+    \item % 5
+        略.
+    \item % 6
+        略.
+    \item % 7
+        略.
+    \item % 8
+        \begin{proof}
+            因为 $S$ 的 boundary point 一定是它的 accumulation point, 因此 $\partial{S} \subset S$, 故 $S$ 是一个 closed set.
+        \end{proof}
+    \item % 9
+        \begin{proof}
+            因为 domain 一定是 open set, 因此任意一点 $z \in S$, 必存在 $N_\varepsilon'(z) \subset S$, 因此 $z$ 是一个 accumulation point.
+        \end{proof}
+    \item % 10
+        \begin{proof}
+            取 $\varepsilon = \min\{|z_1 - z_2|, |z_1 - z_3|, \cdots, |z_1 - z_n|, |z_2 - z_3|, \cdots, |z_2 - z_n|, \cdots, |z_{n-1} - z_n|\}$,
+            显然 $N_\varepsilon'(z_1)$, $N_\varepsilon'(z_2)$, $\cdots$, $N_\varepsilon'(z_n)$ 都不包含 $S$ 中的点, 因此每一个 $z_i\ (i = 1, 2, \cdots, n)$ 都不是聚点.
+        \end{proof}
+\end{enumerate}
+\end{document}
+        
